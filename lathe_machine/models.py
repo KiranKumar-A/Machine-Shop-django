@@ -11,3 +11,9 @@ class lathe_machine(models.Model):
         return self.lathe,self.uses,self.products_made_by_lathe,self.History,self.types
 
 
+class Customer(models.Model):
+    name=models.CharField(max_length=100)
+    product_name=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
